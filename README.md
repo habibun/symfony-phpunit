@@ -30,7 +30,7 @@ git clone git@github.com:habibun/symfony-phpunit.git
 cd symfony-phpunit
 git checkout v2
 symfony composer install
-symfony server:start
+symfony php ./bin/console server:run
 ```
 
 </p>
