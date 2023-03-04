@@ -32,5 +32,4 @@ class Dinosaur
         return $this;
     }
 
-
 }
