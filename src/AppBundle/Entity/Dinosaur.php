@@ -7,6 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 class Dinosaur
 {
     const LARGE = 20;
+    const HUGE = 30;
 
     /**
      * @var int
