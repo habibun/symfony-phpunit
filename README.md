@@ -6,7 +6,7 @@ Please check the [projects](#projects) section for more details.
 ## Overview
 | Branch   | PHPUnit Version | Symfony Version | PHP Version |
 |----------|-----------------|-----------------|-------------|
-| [v2][v2] | `^6.0`          | `^3.0`          | `^0.0`      |
+| [v2][v2] | `^6.5`          | `^3.4`          | `^7.0`      |
 
 
 ## Projects
