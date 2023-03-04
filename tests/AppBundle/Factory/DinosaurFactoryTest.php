@@ -2,12 +2,21 @@
 
 namespace Tests\AppBundle\Factory;
 
-class DinosaurFactoryTest
+use AppBundle\Entity\Dinosaur;
+use AppBundle\Factory\DinosaurFactory;
+use PHPUnit\Framework\TestCase;
+
+class DinosaurFactoryTest extends TestCase
 {
+    private $factory;
+
+    public function setUp()
+    {
+        $this->factory = new DinosaurFactory();
+    }
     public function testItGrowsALargeVelociraptor()
     {
-        $factory = new DinosaurFactory();
-        $dinosaur = $factory->growVelociraptor(5);
+        $dinosaur = $this->factory->growVelociraptor(5);
         $this->assertInstanceOf(Dinosaur::class, $dinosaur);
         $this->assertInternalType('string', $dinosaur->getGenus());
         $this->assertSame('Velociraptor', $dinosaur->getGenus());
@@ -19,5 +28,21 @@ class DinosaurFactoryTest
         $dinosaur = new Dinosaur('Velociraptor', true);
         $dinosaur->setLength($length);
         return $dinosaur;
+    }
+
+    public function testItGrowsATriceraptors()
+    {
+        $this->markTestIncomplete('Waiting for confirmation from GenLab');
+    }
+
+    public function testItGrowsABabyVelociraptor()
+    {
+        if (!class_exists('Nanny')) {
+            $this->markTestSkipped('There is nobody to watch the baby!');
+        }
+
+        $dinosaur = $this->factory->growVelociraptor(1);
+
+        $this->assertSame(1, $dinosaur->getLength());
     }
 }

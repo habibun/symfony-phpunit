@@ -3,7 +3,6 @@
 namespace Tests\AppBundle\Entity;
 
 use AppBundle\Entity\Dinosaur;
-use AppBundle\Factory\DinosaurFactory;
 use PHPUnit\Framework\TestCase;
 class DinosaurTest extends TestCase
 {
@@ -41,15 +40,5 @@ class DinosaurTest extends TestCase
             'The Tyrannosaurus carnivorous dinosaur is 12 meters long',
             $dinosaur->getSpecification()
         );
-    }
-
-    public function testItGrowsALargeVelociraptor()
-    {
-        $factory = new DinosaurFactory();
-        $dinosaur = $factory->growVelociraptor(5);
-        $this->assertInstanceOf(Dinosaur::class, $dinosaur);
-        $this->assertInternalType('string', $dinosaur->getGenus());
-        $this->assertSame('Velociraptor', $dinosaur->getGenus());
-        $this->assertSame(5, $dinosaur->getLength());
     }
 }
