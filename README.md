@@ -14,8 +14,8 @@ Please check the [projects](#projects) section for more details.
 <p>  
 
 <img
-src="x"
-alt="x"
+src="https://user-images.githubusercontent.com/5810350/224282492-8ff6699c-bdd2-4692-b533-cb0bbbbbdb94.png"
+alt="phpunit-legacy"
 width="50%"
 />
 
