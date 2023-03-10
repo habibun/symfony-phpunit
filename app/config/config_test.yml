@@ -25,4 +25,5 @@ doctrine:
     dbal:
         url: 'sqlite:///%kernel.project_dir%/var/data/test.sqlite'
 
-liip_functional_test: ~
+liip_functional_test:
+    cache_sqlite_db: true
