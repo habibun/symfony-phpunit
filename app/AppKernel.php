@@ -1,5 +1,6 @@
 <?php
 
+use Liip\FunctionalTestBundle\LiipFunctionalTestBundle;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Kernel;
 use Symfony\Component\Config\Loader\LoaderInterface;
@@ -27,6 +28,10 @@ class AppKernel extends Kernel
             if ('dev' === $this->getEnvironment()) {
                 $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
                 $bundles[] = new Symfony\Bundle\WebServerBundle\WebServerBundle();
+            }
+
+            if ('test' === $this->getEnvironment()) {
+                $bundles[] = new LiipFunctionalTestBundle();
             }
         }
 
