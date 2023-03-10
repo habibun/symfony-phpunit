@@ -1,6 +1,12 @@
 imports:
     - { resource: config_dev.yml }
 
+services:
+    _defaults:
+        public: true
+
+    test.AppBundle\Service\EnclosureBuilderService: '@AppBundle\Service\EnclosureBuilderService'
+
 framework:
     test: ~
     session:
