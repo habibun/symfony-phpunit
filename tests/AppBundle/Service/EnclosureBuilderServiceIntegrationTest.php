@@ -5,11 +5,18 @@ namespace Tests\AppBundle\Service;
 use AppBundle\Entity\Dinosaur;
 use AppBundle\Entity\Security;
 use AppBundle\Service\EnclosureBuilderService;
+use Doctrine\Common\DataFixtures\Purger\ORMPurger;
 use Doctrine\ORM\EntityManager;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 
 class EnclosureBuilderServiceIntegrationTest extends KernelTestCase
 {
+    public function setUp()
+    {
+        self::bootKernel();
+        $this->truncateEntities();
+    }
+
     public function testItBuildsEnclosureWithDefaultSpecifications()
     {
         self::bootKernel();
@@ -19,9 +26,7 @@ class EnclosureBuilderServiceIntegrationTest extends KernelTestCase
         $enclosureBuilderService->buildEnclosure();
 
         /** @var EntityManager $em */
-        $em = self::$kernel->getContainer()
-            ->get('doctrine')
-            ->getManager();
+        $em = $this->getEntityManager();
 
         $count = (int) $em->getRepository(Security::class)
             ->createQueryBuilder('s')
@@ -39,4 +44,19 @@ class EnclosureBuilderServiceIntegrationTest extends KernelTestCase
 
     }
 
+    /**
+     * @return EntityManager
+     */
+    private function getEntityManager()
+    {
+        return self::$kernel->getContainer()
+            ->get('doctrine')
+            ->getManager();
+    }
+
+    private function truncateEntities()
+    {
+        $purger = new ORMPurger($this->getEntityManager());
+        $purger->purge();
+    }
 }
