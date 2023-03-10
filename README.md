@@ -40,7 +40,7 @@ symfony php ./bin/console server:run
 ## Learn More
 - [PHPUnit Docs][phpunit_docs]
 - [TDD](https://en.wikipedia.org/wiki/Test-driven_development)
--[Configuring CircleCI](https://circleci.com/docs/configuration-reference/)
+- [Configuring CircleCI](https://circleci.com/docs/configuration-reference/)
 
 
 ## Related
