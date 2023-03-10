@@ -1,77 +1,63 @@
-Symfony Standard Edition
-========================
+## About The Project
+[Symfony][symfony_website] with [PHPUnit][phpunit_website]
 
-**WARNING**: This distribution does not support Symfony 4. See the
-[Installing & Setting up the Symfony Framework][15] page to find a replacement
-that fits you best.
+Please check the [projects](#projects) section for more details.
 
-Welcome to the Symfony Standard Edition - a fully-functional Symfony
-application that you can use as the skeleton for your new applications.
+## Overview
+| Branch   | PHPUnit Version | Symfony Version | PHP Version |
+|----------|-----------------|-----------------|-------------|
+| [v6][v2] | `^6.5`          | `^3.4`          | `^7.0`      |
 
-For details on how to download and get started with Symfony, see the
-[Installation][1] chapter of the Symfony Documentation.
 
-What's inside?
---------------
+## Projects
+<details><summary>Sample application using PHPUnit v6</summary>  
+<p>  
 
-The Symfony Standard Edition is configured with the following defaults:
+<img
+src="x"
+alt="x"
+width="50%"
+/>
 
-  * An AppBundle you can use to start coding;
+**Resources:**
+- [PHPUnit (Legacy): Testing with a Bite](https://symfonycasts.com/screencast/phpunit-legacy)
+  <br/>
 
-  * Twig as the only configured template engine;
 
-  * Doctrine ORM/DBAL;
+#### Installation
+```bash
+git clone git@github.com:habibun/symfony-phpunit.git
+cd symfony-phpunit
+git checkout v2
+symfony composer install
+symfony php ./bin/console server:run
+```
 
-  * Swiftmailer;
+</p>
+</details>
 
-  * Annotations enabled for everything.
 
-It comes pre-configured with the following bundles:
+## Learn More
+- [PHPUnit Docs][phpunit_docs]
+- [TDD](https://en.wikipedia.org/wiki/Test-driven_development)
+- [Configuring CircleCI](https://circleci.com/docs/configuration-reference/)
 
-  * **FrameworkBundle** - The core Symfony framework bundle
 
-  * [**SensioFrameworkExtraBundle**][6] - Adds several enhancements, including
-    template and routing annotation capability
+## Related
+- [Symfony](https://github.com/habibun/symfony)
 
-  * [**DoctrineBundle**][7] - Adds support for the Doctrine ORM
 
-  * [**TwigBundle**][8] - Adds support for the Twig templating engine
+## License
+Distributed under the MIT License. See **[LICENSE][license]** for more information.
 
-  * [**SecurityBundle**][9] - Adds security by integrating Symfony's security
-    component
 
-  * [**SwiftmailerBundle**][10] - Adds support for Swiftmailer, a library for
-    sending emails
 
-  * [**MonologBundle**][11] - Adds support for Monolog, a logging library
+[//]: # (Links)
+[license]: https://github.com/habibun/symfony-phpunit/blob/main/LICENSE
+[symfony_website]: https://symfony.com/
 
-  * **WebProfilerBundle** (in dev/test env) - Adds profiling functionality and
-    the web debug toolbar
+[phpunit_website]: https://phpunit.de/index.html
+[phpunit_docs]: https://phpunit.de/documentation.html
 
-  * **SensioDistributionBundle** (in dev/test env) - Adds functionality for
-    configuring and working with Symfony distributions
-
-  * [**SensioGeneratorBundle**][13] (in dev env) - Adds code generation
-    capabilities
-
-  * [**WebServerBundle**][14] (in dev env) - Adds commands for running applications
-    using the PHP built-in web server
-
-  * **DebugBundle** (in dev/test env) - Adds Debug and VarDumper component
-    integration
-
-All libraries and bundles included in the Symfony Standard Edition are
-released under the MIT or BSD license.
-
-Enjoy!
-
-[1]:  https://symfony.com/doc/3.4/setup.html
-[6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
-[7]:  https://symfony.com/doc/3.4/doctrine.html
-[8]:  https://symfony.com/doc/3.4/templating.html
-[9]:  https://symfony.com/doc/3.4/security.html
-[10]: https://symfony.com/doc/3.4/email.html
-[11]: https://symfony.com/doc/3.4/logging.html
-[13]: https://symfony.com/doc/current/bundles/SensioGeneratorBundle/index.html
-[14]: https://symfony.com/doc/current/setup/built_in_web_server.html
-[15]: https://symfony.com/doc/current/setup.html
+[v2]: https://github.com/habibun/symfony-phpunit/tree/v6
+[v2_tt]: https://github.com/habibun/symfony-phpunit/tree/v6 "Sample application using PHPUnit v6"
