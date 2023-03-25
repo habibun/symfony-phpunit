@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # run local server
 ./bin/console server:run
 
